@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhaimin Mahmud — PPLG & Web Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Latar belakang grid & cahaya halus -->
+    <div class="bg-grid" aria-hidden="true"></div>
+    <div class="bg-glow" aria-hidden="true"></div>
+
+    <!-- Header Mengambang (Floating Glass Navbar) -->
+    <header class="sticky-header">
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">
+                    <span class="logo-symbol">&gt;_</span> muhaimin.dev
+                </a>
+                <div class="nav-right">
+                    <div class="nav-links">
+                        <a href="#proyek" class="nav-item">Proyek</a>
+                        <a href="#pendidikan" class="nav-item">Pendidikan</a>
+                        <a href="#keahlian" class="nav-item">Keahlian</a>
+                        <a href="#kontak" class="nav-item">Kontak</a>
+                    </div>
+                    <button id="theme-toggle" class="theme-btn" aria-label="Ganti Tema" title="Ganti Mode Terang/Gelap">
+                        <!-- Ikon SVG diisi via JS -->
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero reveal">
+            <div class="hero-header">
+                <div class="profile-avatar" id="avatar-wrapper">
+                    <img src="profil.jpeg" alt="Muhaimin Mahmud" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';">
+                    <div id="avatar-fallback" class="avatar-fallback" style="display: none;">MM</div>
+                </div>
+                <div class="hero-identity">
+                    <div class="status-badge">
+                        <span class="pulse-dot"></span>
+                        <span>Terbuka untuk Magang / PKL & Kolaborasi</span>
+                    </div>
+                    <h2 class="hero-name">Muhaimin Mahmud</h2>
+                </div>
+            </div>
+
+            <h1>Membangun aplikasi web yang <span class="text-gradient">bersih, cepat, dan fungsional.</span></h1>
+            
+            <p class="bio">
+                Siswa kelas 12 jurusan Pengembangan Perangkat Lunak dan Gim (PPLG) di <strong>MAKN Ende</strong>. Berfokus pada pengembangan antarmuka web modern dan perancangan sistem berbasis kode yang efisien.
+            </p>
+
+            <div class="hero-links">
+                <a href="#proyek" class="btn-primary">
+                    Lihat Proyek
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"></line><polyline points="19 12 12 19 5 12"></polyline></svg>
+                </a>
+                <a href="https://github.com/Muhaimin06" target="_blank" rel="noopener" class="btn-secondary">
+                    GitHub
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener" class="btn-secondary">
+                    LinkedIn
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- Proyek Pilihan -->
+        <section id="proyek" class="section reveal">
+            <div class="section-header">
+                <div class="section-title-group">
+                    <span class="section-kicker">01 // KARYA</span>
+                    <h2>Proyek Pilihan</h2>
+                </div>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Semua</button>
+                    <button class="filter-btn" data-filter="web">Web App</button>
+                    <button class="filter-btn" data-filter="gim">Gim & Sistem</button>
+                </div>
+            </div>
+
+            <div class="project-list">
+                <!-- Proyek 1 -->
+                <article class="project-card spotlight-card" data-category="web" 
+                    data-title="Portal Informasi MAKN Ende" 
+                    data-year="2026" 
+                    data-role="Frontend Developer"
+                    data-stack="HTML5, CSS3, JavaScript"
+                    data-desc="Purwarupa situs informasi sekolah yang menampilkan profil jurusan PPLG, pengumuman akademik, dan galeri kegiatan siswa dengan tata letak responsif untuk perangkat seluler maupun desktop."
+                    data-link="https://contoh-proyek1.com">
+                    <div class="project-main">
+                        <div class="project-top-meta">
+                            <span class="year">2026</span>
+                            <span class="category-pill">Web App</span>
+                        </div>
+                        <h3>Portal Informasi MAKN Ende</h3>
+                        <p>Situs profil jurusan dan informasi kegiatan siswa berbasis web responsif.</p>
+                        <div class="tech-tags">
+                            <span>HTML5</span>
+                            <span>CSS Grid</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </div>
+                </article>
+
+                <!-- Proyek 2 -->
+                <article class="project-card spotlight-card" data-category="gim" 
+                    data-title="Sistem Inventaris Lab PPLG" 
+                    data-year="2025" 
+                    data-role="Fullstack Developer"
+                    data-stack="PHP, MySQL, Modern CSS"
+                    data-desc="Aplikasi web untuk mencatat peminjaman perangkat keras, laptop, dan peralatan praktik siswa di laboratorium komputer jurusan PPLG dengan pelacakan status barang."
+                    data-link="https://contoh-proyek2.com">
+                    <div class="project-main">
+                        <div class="project-top-meta">
+                            <span class="year">2025</span>
+                            <span class="category-pill">Sistem</span>
+                        </div>
+                        <h3>Sistem Inventaris Lab PPLG</h3>
+                        <p>Aplikasi pencatatan peminjaman alat praktik dan perangkat laboratorium sekolah.</p>
+                        <div class="tech-tags">
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>CRUD</span>
+                        </div>
+                    </div>
+                    <div class="project-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </div>
+                </article>
+
+                <!-- Proyek 3 -->
+                <article class="project-card spotlight-card" data-category="web" 
+                    data-title="Eksplorasi Wisata Ende & Kelimutu" 
+                    data-year="2025" 
+                    data-role="Web Designer & Developer"
+                    data-stack="HTML, Modern CSS, Vanilla JS"
+                    data-desc="Halaman web katalog wisata daerah Kabupaten Ende yang memperkenalkan destinasi ikonik seperti Danau Kelimutu, Situs Bung Karno, dan budaya lokal dengan optimasi kecepatan muat."
+                    data-link="https://contoh-proyek3.com">
+                    <div class="project-main">
+                        <div class="project-top-meta">
+                            <span class="year">2025</span>
+                            <span class="category-pill">Web App</span>
+                        </div>
+                        <h3>Eksplorasi Wisata Ende</h3>
+                        <p>Katalog digital interaktif destinasi wisata dan sejarah di Kabupaten Ende, NTT.</p>
+                        <div class="tech-tags">
+                            <span>UI Design</span>
+                            <span>Vanilla JS</span>
+                            <span>Web Performance</span>
+                        </div>
+                    </div>
+                    <div class="project-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </div>
+                </article>
+
+                <!-- Proyek 4 -->
+                <article class="project-card spotlight-card" data-category="gim" 
+                    data-title="Kuis Edukasi Pemrograman Dasar" 
+                    data-year="2024" 
+                    data-role="Game & Web Developer"
+                    data-stack="JavaScript, HTML5 Canvas, DOM"
+                    data-desc="Gim kuis interaktif berbasis browser yang dibuat sebagai tugas praktik mata pelajaran pemrograman dasar untuk melatih logika algoritma siswa kelas 10."
+                    data-link="https://contoh-proyek4.com">
+                    <div class="project-main">
+                        <div class="project-top-meta">
+                            <span class="year">2024</span>
+                            <span class="category-pill">Gim</span>
+                        </div>
+                        <h3>Kuis Edukasi Pemrograman</h3>
+                        <p>Gim interaktif berbasis web untuk melatih logika dasar algoritma dan pemrograman.</p>
+                        <div class="tech-tags">
+                            <span>JavaScript</span>
+                            <span>Game Logic</span>
+                            <span>DOM API</span>
+                        </div>
+                    </div>
+                    <div class="project-arrow">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Pendidikan & Sertifikasi -->
+        <section id="pendidikan" class="section reveal">
+            <div class="section-title-group">
+                <span class="section-kicker">02 // LATAR BELAKANG</span>
+                <h2>Pendidikan & Sertifikasi</h2>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">2024 — Sekarang</div>
+                    <div class="timeline-content">
+                        <h3>Siswa Kelas 12 PPLG — MAKN Ende</h3>
+                        <p>Madrasah Aliyah Kejuruan Negeri Ende. Mendalami Pengembangan Perangkat Lunak dan Gim, meliputi pemrograman web (HTML, CSS, JS, PHP), basis data (MySQL), serta logika pemrograman.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">2025 — 2026</div>
+                    <div class="timeline-content">
+                        <h3>Praktik Kerja Lapangan (PKL) & Proyek Mandiri</h3>
+                        <p>Mengerjakan studi kasus pembuatan aplikasi web responsif, perancangan struktur basis data, dan pengembangan portofolio proyek mandiri selama masa studi kejuruan.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="cert-grid">
+                <div class="cert-item spotlight-card">
+                    <div class="cert-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                    </div>
+                    <div>
+                        <h3>Belajar Dasar Pemrograman Web</h3>
+                        <p class="cert-issuer">Dicoding Indonesia &bull; 2025</p>
+                    </div>
+                </div>
+                <div class="cert-item spotlight-card">
+                    <div class="cert-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"></circle><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline></svg>
+                    </div>
+                    <div>
+                        <h3>Dasar Pengembangan Perangkat Lunak</h3>
+                        <p class="cert-issuer">Pelatihan Kejuruan PPLG &bull; 2024</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Keahlian -->
+        <section id="keahlian" class="section reveal">
+            <div class="section-title-group">
+                <span class="section-kicker">03 // STACK & TOOLS</span>
+                <h2>Keahlian Teknis</h2>
+            </div>
+
+            <div class="skills-grid">
+                <div class="skill-card spotlight-card">
+                    <h3>Pengembangan Web & Data</h3>
+                    <div class="skill-pills">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>PHP Dasar</span>
+                        <span>MySQL</span>
+                        <span>Java</span>
+                    </div>
+                </div>
+                <div class="skill-card spotlight-card">
+                    <h3>Alat & Alur Kerja</h3>
+                    <div class="skill-pills">
+                        <span>VS Code</span>
+                        <span>Git & GitHub</span>
+                        <span>Figma (UI/UX)</span>
+                        <span>Laragon / XAMPP</span>
+                        <span>Chrome DevTools</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Kontak & Form -->
+        <section id="kontak" class="section contact-section reveal">
+            <div class="section-title-group">
+                <span class="section-kicker">04 // KOLABORASI</span>
+                <h2>Mari Terhubung</h2>
+            </div>
+            <p class="contact-desc">Tertarik berdiskusi mengenai proyek web, kolaborasi belajar, atau peluang magang/PKL? Kirim pesan langsung melalui formulir atau salin alamat email di bawah ini.</p>
+            
+            <div class="contact-box">
+                <a href="mailto:muhaiminmahmud06@gmail.com" class="email-text">muhaiminmahmud06@gmail.com</a>
+                <button id="copy-btn" class="copy-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                    <span>Salin Email</span>
+                </button>
+            </div>
+
+            <!-- Formulir Pesan Interaktif -->
+            <form id="contact-form" class="contact-form spotlight-card">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="sender-name">Nama Lengkap</label>
+                        <input type="text" id="sender-name" placeholder="Contoh: Budi Santoso" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="sender-message">Pesan</label>
+                    <textarea id="sender-message" rows="4" placeholder="Tuliskan pesan atau detail proyek Anda..." required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="send-wa-btn" class="btn-primary">
+                        Kirim via WhatsApp
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </button>
+                    <button type="submit" id="send-email-btn" class="btn-secondary">
+                        Kirim via Email
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    </button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="container">
+        <div class="footer-inner">
+            <p>&copy; <span id="year"></span> Muhaimin Mahmud. Dibuat dengan kode bersih.</p>
+            <p class="footer-loc">Ende, Nusa Tenggara Timur</p>
+        </div>
+    </footer>
+
+    <!-- Modal Detail Proyek -->
+    <div id="modal" class="modal" role="dialog" aria-modal="true">
+        <div class="modal-card">
+            <div class="modal-header">
+                <span id="modal-year" class="mono-badge"></span>
+                <button id="close-modal" class="close-btn" aria-label="Tutup">&times;</button>
+            </div>
+            <h3 id="modal-title"></h3>
+            <div class="modal-meta-grid">
+                <div>
+                    <span class="meta-label">Peran</span>
+                    <span id="modal-role" class="meta-value"></span>
+                </div>
+                <div>
+                    <span class="meta-label">Teknologi</span>
+                    <span id="modal-stack" class="meta-value"></span>
+                </div>
+            </div>
+            <p id="modal-desc" class="modal-body"></p>
+            <div class="modal-footer">
+                <a id="modal-link" href="#" target="_blank" rel="noopener" class="btn-primary">
+                    Kunjungi Proyek
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>
