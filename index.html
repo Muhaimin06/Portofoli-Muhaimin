@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhaimin Mahmud</title>
+    <title>Muhaimin Mahmud — PPLG & Web Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -24,6 +24,7 @@
                 </a>
                 <div class="nav-right">
                     <div class="nav-links">
+                        <a href="#tentang" class="nav-item">Tentang</a>
                         <a href="#proyek" class="nav-item">Proyek</a>
                         <a href="#pendidikan" class="nav-item">Pendidikan</a>
                         <a href="#keahlian" class="nav-item">Keahlian</a>
@@ -76,11 +77,48 @@
             </div>
         </section>
 
+        <!-- Tentang Saya -->
+        <section id="tentang" class="section reveal">
+            <div class="section-title-group">
+                <span class="section-kicker">01 // PROFIL</span>
+                <h2>Tentang Saya</h2>
+            </div>
+
+            <div class="about-grid spotlight-card">
+                <div class="about-photo">
+                    <!-- Ganti src dengan foto terbaikmu, misalnya profil.jpeg atau tentang.jpeg -->
+                    <img src="profil.jpeg" alt="Foto Muhaimin Mahmud" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="photo-fallback" style="display: none;">
+                        <span>Foto Profil</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h3>Halo, saya Muhaimin Mahmud</h3>
+                    <p>
+                        Saya adalah pelajar kejuruan di <strong>Madrasah Aliyah Kejuruan Negeri (MAKN) Ende</strong> yang memiliki ketertarikan mendalam pada dunia rekayasa perangkat lunak, desain antarmuka (UI), dan pengembangan web.
+                    </p>
+                    <p>
+                        Bagi saya, menulis kode bukan sekadar membuat tampilan menarik, tetapi juga memastikan struktur sistem mudah digunakan, ringan diakses, dan mampu menyelesaikan masalah nyata di lingkungan sekitar.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-label">Domisili</span>
+                            <span class="highlight-val">Ende, NTT</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-label">Fokus Utama</span>
+                            <span class="highlight-val">Web & Software Dev</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Proyek Pilihan -->
         <section id="proyek" class="section reveal">
             <div class="section-header">
                 <div class="section-title-group">
-                    <span class="section-kicker">01 // KARYA</span>
+                    <span class="section-kicker">02 // KARYA</span>
                     <h2>Proyek Pilihan</h2>
                 </div>
                 <div class="filters">
@@ -97,23 +135,33 @@
                     data-year="2026" 
                     data-role="Frontend Developer"
                     data-stack="HTML5, CSS3, JavaScript"
+                    data-image="proyek1.jpg"
                     data-desc="Purwarupa situs informasi sekolah yang menampilkan profil jurusan PPLG, pengumuman akademik, dan galeri kegiatan siswa dengan tata letak responsif untuk perangkat seluler maupun desktop."
                     data-link="https://contoh-proyek1.com">
-                    <div class="project-main">
-                        <div class="project-top-meta">
-                            <span class="year">2026</span>
-                            <span class="category-pill">Web App</span>
-                        </div>
-                        <h3>Portal Informasi MAKN Ende</h3>
-                        <p>Situs profil jurusan dan informasi kegiatan siswa berbasis web responsif.</p>
-                        <div class="tech-tags">
-                            <span>HTML5</span>
-                            <span>CSS Grid</span>
-                            <span>JavaScript</span>
+                    <div class="project-thumb">
+                        <img src="proyek1.jpg" alt="Preview Portal Informasi MAKN Ende" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="thumb-placeholder" style="display: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            <span>proyek1.jpg</span>
                         </div>
                     </div>
-                    <div class="project-arrow">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    <div class="project-body-wrap">
+                        <div class="project-main">
+                            <div class="project-top-meta">
+                                <span class="year">2026</span>
+                                <span class="category-pill">Web App</span>
+                            </div>
+                            <h3>Portal Informasi MAKN Ende</h3>
+                            <p>Situs profil jurusan dan informasi kegiatan siswa berbasis web responsif.</p>
+                            <div class="tech-tags">
+                                <span>HTML5</span>
+                                <span>CSS Grid</span>
+                                <span>JavaScript</span>
+                            </div>
+                        </div>
+                        <div class="project-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </div>
                     </div>
                 </article>
 
@@ -123,23 +171,33 @@
                     data-year="2025" 
                     data-role="Fullstack Developer"
                     data-stack="PHP, MySQL, Modern CSS"
+                    data-image="proyek2.jpg"
                     data-desc="Aplikasi web untuk mencatat peminjaman perangkat keras, laptop, dan peralatan praktik siswa di laboratorium komputer jurusan PPLG dengan pelacakan status barang."
                     data-link="https://contoh-proyek2.com">
-                    <div class="project-main">
-                        <div class="project-top-meta">
-                            <span class="year">2025</span>
-                            <span class="category-pill">Sistem</span>
-                        </div>
-                        <h3>Sistem Inventaris Lab PPLG</h3>
-                        <p>Aplikasi pencatatan peminjaman alat praktik dan perangkat laboratorium sekolah.</p>
-                        <div class="tech-tags">
-                            <span>PHP</span>
-                            <span>MySQL</span>
-                            <span>CRUD</span>
+                    <div class="project-thumb">
+                        <img src="proyek2.jpg" alt="Preview Sistem Inventaris Lab PPLG" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="thumb-placeholder" style="display: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            <span>proyek2.jpg</span>
                         </div>
                     </div>
-                    <div class="project-arrow">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    <div class="project-body-wrap">
+                        <div class="project-main">
+                            <div class="project-top-meta">
+                                <span class="year">2025</span>
+                                <span class="category-pill">Sistem</span>
+                            </div>
+                            <h3>Sistem Inventaris Lab PPLG</h3>
+                            <p>Aplikasi pencatatan peminjaman alat praktik dan perangkat laboratorium sekolah.</p>
+                            <div class="tech-tags">
+                                <span>PHP</span>
+                                <span>MySQL</span>
+                                <span>CRUD</span>
+                            </div>
+                        </div>
+                        <div class="project-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </div>
                     </div>
                 </article>
 
@@ -149,23 +207,33 @@
                     data-year="2025" 
                     data-role="Web Designer & Developer"
                     data-stack="HTML, Modern CSS, Vanilla JS"
+                    data-image="proyek3.jpg"
                     data-desc="Halaman web katalog wisata daerah Kabupaten Ende yang memperkenalkan destinasi ikonik seperti Danau Kelimutu, Situs Bung Karno, dan budaya lokal dengan optimasi kecepatan muat."
                     data-link="https://contoh-proyek3.com">
-                    <div class="project-main">
-                        <div class="project-top-meta">
-                            <span class="year">2025</span>
-                            <span class="category-pill">Web App</span>
-                        </div>
-                        <h3>Eksplorasi Wisata Ende</h3>
-                        <p>Katalog digital interaktif destinasi wisata dan sejarah di Kabupaten Ende, NTT.</p>
-                        <div class="tech-tags">
-                            <span>UI Design</span>
-                            <span>Vanilla JS</span>
-                            <span>Web Performance</span>
+                    <div class="project-thumb">
+                        <img src="proyek3.jpg" alt="Preview Eksplorasi Wisata Ende" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="thumb-placeholder" style="display: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            <span>proyek3.jpg</span>
                         </div>
                     </div>
-                    <div class="project-arrow">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    <div class="project-body-wrap">
+                        <div class="project-main">
+                            <div class="project-top-meta">
+                                <span class="year">2025</span>
+                                <span class="category-pill">Web App</span>
+                            </div>
+                            <h3>Eksplorasi Wisata Ende</h3>
+                            <p>Katalog digital interaktif destinasi wisata dan sejarah di Kabupaten Ende, NTT.</p>
+                            <div class="tech-tags">
+                                <span>UI Design</span>
+                                <span>Vanilla JS</span>
+                                <span>Web Performance</span>
+                            </div>
+                        </div>
+                        <div class="project-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </div>
                     </div>
                 </article>
 
@@ -175,23 +243,33 @@
                     data-year="2024" 
                     data-role="Game & Web Developer"
                     data-stack="JavaScript, HTML5 Canvas, DOM"
+                    data-image="proyek4.jpg"
                     data-desc="Gim kuis interaktif berbasis browser yang dibuat sebagai tugas praktik mata pelajaran pemrograman dasar untuk melatih logika algoritma siswa kelas 10."
                     data-link="https://contoh-proyek4.com">
-                    <div class="project-main">
-                        <div class="project-top-meta">
-                            <span class="year">2024</span>
-                            <span class="category-pill">Gim</span>
-                        </div>
-                        <h3>Kuis Edukasi Pemrograman</h3>
-                        <p>Gim interaktif berbasis web untuk melatih logika dasar algoritma dan pemrograman.</p>
-                        <div class="tech-tags">
-                            <span>JavaScript</span>
-                            <span>Game Logic</span>
-                            <span>DOM API</span>
+                    <div class="project-thumb">
+                        <img src="proyek4.jpg" alt="Preview Kuis Edukasi Pemrograman" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="thumb-placeholder" style="display: none;">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                            <span>proyek4.jpg</span>
                         </div>
                     </div>
-                    <div class="project-arrow">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                    <div class="project-body-wrap">
+                        <div class="project-main">
+                            <div class="project-top-meta">
+                                <span class="year">2024</span>
+                                <span class="category-pill">Gim</span>
+                            </div>
+                            <h3>Kuis Edukasi Pemrograman</h3>
+                            <p>Gim interaktif berbasis web untuk melatih logika dasar algoritma dan pemrograman.</p>
+                            <div class="tech-tags">
+                                <span>JavaScript</span>
+                                <span>Game Logic</span>
+                                <span>DOM API</span>
+                            </div>
+                        </div>
+                        <div class="project-arrow">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -200,26 +278,48 @@
         <!-- Pendidikan & Sertifikasi -->
         <section id="pendidikan" class="section reveal">
             <div class="section-title-group">
-                <span class="section-kicker">02 // LATAR BELAKANG</span>
-                <h2>Pendidikan & Sertifikasi</h2>
+                <span class="section-kicker">03 // LATAR BELAKANG</span>
+                <h2>Riwayat Pendidikan & Sertifikasi</h2>
             </div>
 
             <div class="timeline">
+                <!-- MAKN / SMK -->
                 <div class="timeline-item">
-                    <div class="timeline-marker"></div>
+                    <div class="timeline-marker active-marker"></div>
                     <div class="timeline-date">2024 — Sekarang</div>
                     <div class="timeline-content">
-                        <h3>Siswa Kelas 12 PPLG — MAKN Ende</h3>
+                        <h3>MAKN Ende — Jurusan PPLG (Kelas 12)</h3>
                         <p>Madrasah Aliyah Kejuruan Negeri Ende. Mendalami Pengembangan Perangkat Lunak dan Gim, meliputi pemrograman web (HTML, CSS, JS, PHP), basis data (MySQL), serta logika pemrograman.</p>
                     </div>
                 </div>
 
+                <!-- SMP / MTs -->
                 <div class="timeline-item">
                     <div class="timeline-marker"></div>
-                    <div class="timeline-date">2025 — 2026</div>
+                    <div class="timeline-date">2021 — 2024</div>
                     <div class="timeline-content">
-                        <h3>Praktik Kerja Lapangan (PKL) & Proyek Mandiri</h3>
-                        <p>Mengerjakan studi kasus pembuatan aplikasi web responsif, perancangan struktur basis data, dan pengembangan portofolio proyek mandiri selama masa studi kejuruan.</p>
+                        <h3>SMP / MTs (Sesuaikan Nama Sekolah)</h3>
+                        <p>Menyelesaikan pendidikan menengah pertama dengan ketertarikan awal pada bidang teknologi informasi, komputer dasar, dan kegiatan organisasi siswa.</p>
+                    </div>
+                </div>
+
+                <!-- SD / MI -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">2015 — 2021</div>
+                    <div class="timeline-content">
+                        <h3>SD / MI (Sesuaikan Nama Sekolah)</h3>
+                        <p>Menempuh pendidikan dasar dan membangun fondasi akademik serta kedisiplinan belajar.</p>
+                    </div>
+                </div>
+
+                <!-- TK -->
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-date">2013 — 2015</div>
+                    <div class="timeline-content">
+                        <h3>Taman Kanak-Kanak / RA (Sesuaikan Nama TK)</h3>
+                        <p>Pendidikan anak usia dini sebagai langkah awal mengenal lingkungan belajar dan kreativitas.</p>
                     </div>
                 </div>
             </div>
@@ -249,7 +349,7 @@
         <!-- Keahlian -->
         <section id="keahlian" class="section reveal">
             <div class="section-title-group">
-                <span class="section-kicker">03 // STACK & TOOLS</span>
+                <span class="section-kicker">04 // STACK & TOOLS</span>
                 <h2>Keahlian Teknis</h2>
             </div>
 
@@ -281,7 +381,7 @@
         <!-- Kontak & Form -->
         <section id="kontak" class="section contact-section reveal">
             <div class="section-title-group">
-                <span class="section-kicker">04 // KOLABORASI</span>
+                <span class="section-kicker">05 // KOLABORASI</span>
                 <h2>Mari Terhubung</h2>
             </div>
             <p class="contact-desc">Tertarik berdiskusi mengenai proyek web, kolaborasi belajar, atau peluang magang/PKL? Kirim pesan langsung melalui formulir atau salin alamat email di bawah ini.</p>
@@ -333,6 +433,9 @@
             <div class="modal-header">
                 <span id="modal-year" class="mono-badge"></span>
                 <button id="close-modal" class="close-btn" aria-label="Tutup">&times;</button>
+            </div>
+            <div id="modal-img-wrap" class="modal-img-wrap">
+                <img id="modal-img" src="" alt="Preview Proyek">
             </div>
             <h3 id="modal-title"></h3>
             <div class="modal-meta-grid">

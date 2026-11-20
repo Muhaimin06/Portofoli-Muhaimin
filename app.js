@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         applyTheme(nextTheme);
     });
 
-    // 2. Helper Toast Notification (Pengganti Alert)
+    // 2. Helper Toast Notification
     const toastEl = document.getElementById('toast');
     let toastTimeout;
 
@@ -75,9 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 6. Modal Detail Proyek
+    // 6. Modal Detail Proyek (termasuk pratinjau gambar)
     const modal = document.getElementById('modal');
     const closeModal = document.getElementById('close-modal');
+    const modalImgWrap = document.getElementById('modal-img-wrap');
+    const modalImg = document.getElementById('modal-img');
 
     projectCards.forEach(card => {
         card.addEventListener('click', () => {
@@ -87,6 +89,17 @@ document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('modal-stack').textContent = card.getAttribute('data-stack');
             document.getElementById('modal-desc').textContent = card.getAttribute('data-desc');
             document.getElementById('modal-link').href = card.getAttribute('data-link');
+
+            const imgSrc = card.getAttribute('data-image');
+            if (imgSrc) {
+                modalImgWrap.style.display = 'block';
+                modalImg.src = imgSrc;
+                modalImg.onerror = () => {
+                    modalImgWrap.style.display = 'none';
+                };
+            } else {
+                modalImgWrap.style.display = 'none';
+            }
             
             modal.classList.add('open');
             document.body.style.overflow = 'hidden';
@@ -120,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 8. Integrasi Formulir Kontak (WhatsApp & Email)
+    // 8. Integrasi Formulir Kontak (WhatsApp & Gmail Web)
     const sendWaBtn = document.getElementById('send-wa-btn');
     const contactForm = document.getElementById('contact-form');
 
@@ -133,12 +146,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Ganti nomor di bawah ini dengan nomor WhatsApp aktif Anda (kode negara 62)
         const phoneNumber = '6285137375672'; 
         const text = `Halo Muhaimin, saya *${name}*.\n\n${message}`;
         const waUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(text)}`;
         
-        window.open(waUrl, '_blank');
+        window.open(waUrl, '_blank', 'noopener');
     });
 
     contactForm.addEventListener('submit', (e) => {
@@ -146,9 +158,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const name = document.getElementById('sender-name').value.trim();
         const message = document.getElementById('sender-message').value.trim();
 
+        if (!name || !message) {
+            showToast('Mohon isi nama dan pesan terlebih dahulu.');
+            return;
+        }
+
         const subject = encodeURIComponent(`Pesan Portofolio dari ${name}`);
-        const body = encodeURIComponent(`Nama: ${name}\n\nPesan:\n${message}`);
-        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+        const body = encodeURIComponent(`Halo Muhaimin,\n\nNama: ${name}\n\nPesan:\n${message}`);
+        const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${email}&su=${subject}&body=${body}`;
+        
+        window.open(gmailUrl, '_blank', 'noopener');
     });
 
     // 9. Scroll Reveal & Active Nav Spy
